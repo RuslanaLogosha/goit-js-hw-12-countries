@@ -1,12 +1,15 @@
 <article class="card">
-    <img src="{{flag}}" alt="{{name}}" class="card__image" />
+    <h2 class="card__name">{{name}}</h2>
     <div class="card__content">
-        <h2 class="card__name">{{name}}</h2>
-        <p class="infoName">Capital:<span class="infoContent">{{capital}}</span></p>
-        <p class="infoName">Population:<span class="infoContent">{{population}}</span></p>
-        <p class="infoName">Languages:
-            {{#each languages}}
-            <li class="infoContent">{{name}}</li>
-            {{/each}}
-        </p>
+
+        <div class="card__info">
+            <p class="infoName">Capital:<span class="infoContent">{{capital}}</span></p>
+            <p class="infoName">Population:<span class="infoContent">{{population}}</span></p>
+            <p class="infoName">Languages:
+                {{#each languages}}
+                <li class="infoContent">{{name}}</li>
+                {{/each}}
+            </p>
+        </div>
+        <img src="{{flag}}" alt="{{name}}" class="card__image" />
 </article>

@@ -55,6 +55,7 @@
     "debounce": "^1.2.0",
     "handlebars": "^4.7.6",
     "lodash": "^4.17.20",
-    "lodash.debounce": "^4.0.8"
+    "lodash.debounce": "^4.0.8",
+    "pnotify": "^5.1.2"
   }
 }
