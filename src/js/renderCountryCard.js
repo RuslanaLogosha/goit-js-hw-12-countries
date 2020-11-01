@@ -10,12 +10,10 @@ const refs = getRefs();
 export default function renderCountryCard(countries) {
 
   if (countries.length === 1) {
-     const markup = countryTempOne(countries[0]);
-     refs.countriesCountainer.innerHTML = markup;
+    refs.countriesContainer.innerHTML = countryTempOne(countries[0]);
   }
   if (countries.length >= 2 && countries.length <= 10) {
-    const markup2_10 = countryTemp2_10(countries);
-    refs.countriesCountainer.innerHTML = markup2_10;
+    refs.countriesContainer.innerHTML = countryTemp2_10(countries);
   }
 
   if (countries.length >= 11) {
@@ -24,7 +22,7 @@ export default function renderCountryCard(countries) {
     defaults.delay = 700;
     defaults.addClass = 'errorStyle';
 
-    const myError = error({
+    error({
     text: "Too many matches found. Please enter a more specific query."
   });
   }
