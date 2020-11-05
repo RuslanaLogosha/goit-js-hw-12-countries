@@ -10,9 +10,14 @@ const refs = getRefs();
 
 refs.searchInput.addEventListener('input', debounce(onSearch, 500));
 
-function onSearch() {
+async function onSearch() {
   const searchQuery = refs.searchInput.value;
-  API.fetchCountry(searchQuery).then(renderCountryCard).catch(onFetchError);
+  // API.fetchCountry(searchQuery).then(renderCountryCard).catch(onFetchError);
+  try {
+    await API.fetchCountry(searchQuery).then(renderCountryCard); 
+  } catch(error) {
+    onFetchError(error);
+  }
 }
 
 refs.searchInput.addEventListener('keydown', onBackspacePress);
